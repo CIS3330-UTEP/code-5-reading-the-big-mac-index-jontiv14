@@ -1,6 +1,14 @@
-# import csv
-# import pandas as pd
-# big_mac_file = './big-mac-full-index.csv'
+import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+
+big_mac_file = './big-mac-full-index.csv'
+df = pd.read_csv(big_mac_file)
+smol_df = df.query("iso_a3 == ARG")
+smol_df.plot.scatter(x = "date", y = "dollar_price")
+plt.show()
+
+
 
 # def get_big_mac_price_by_year(year,country_code):
 #     df= pd.read_csv(big_mac_file)
@@ -74,11 +82,3 @@
 #             print("Invalid choice. Please select again.")
 
 
-
-
-
-
-def get_lastname(fullname):
-  return fullname.split(" ")[-1]
- 
-last_name = get_lastname("Roberto Lopez")
