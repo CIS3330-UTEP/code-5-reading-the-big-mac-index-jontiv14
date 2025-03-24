@@ -38,7 +38,12 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     max_price = df['dollar_price'].max()
     most_expensive = df[df['dollar_price'] == max_price].iloc[0]
     return f"{most_expensive['name']}({most_expensive['iso_a3'].upper()}): ${round(most_expensive['dollar_price'], 2)}"
-##used chatgpt 4.0 to troubleshoot
+##used chatgpt 4.0 
+##Chat-GPT(4.0). Date of query (2025/03/02). “what python code checks for prefixes in strings ?” Generated using OpenAI Chat-GPT
+#Used it to find startswith command
+#**approximating the ai prompt a tad bit, don’t have an account so my history doesn’t go back that far**
+
+
 
 if __name__ == "__main__":
    result_a = get_big_mac_price_by_year(2010, 'arg')
